@@ -1,1 +1,64 @@
-hola, gracias por el apoyo!
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Básica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            color: #0056b3;
+            margin-bottom: 30px;
+        }
+        .rainbow-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white; /* Color del texto para contrastar con el arcoíris */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            background-image: linear-gradient(to right, 
+                #ff0000, /* Rojo */
+                #ff7f00, /* Naranja */
+                #ffff00, /* Amarillo */
+                #00ff00, /* Verde */
+                #0000ff, /* Azul */
+                #4b0082, /* Índigo */
+                #9400d3  /* Violeta */
+            );
+            background-size: 400% 100%; /* Para el efecto de animación */
+            animation: rainbow-animation 8s linear infinite; /* Animación */
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .rainbow-button:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes rainbow-animation {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Hola Mundo!</h1>
+
+    <button class="rainbow-button" onclick="alert('¡Qué bonitas flores de arcoíris!');">
+        Flores de Color del Arcoíris
+    </button>
+</body>
+</html>
